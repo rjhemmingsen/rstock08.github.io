@@ -49,7 +49,7 @@ if (session.getAttribute("email") != null) {
         
         
         <div class="login">
-            <form method="post" action="login();">
+            <form method="post" name="login" action="javascript:login()">
                 <input type="text" placeholder="email" name="email" required>  
                 <input type="password" placeholder="password" name="password" required>
                 <br>

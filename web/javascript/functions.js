@@ -66,7 +66,17 @@ function enrollFinger()
 }
 
 function login(){
+    // Find all dinosaurs whose names come before Pterodactyl lexicographically.
+    //var email = document.forms["login"]["email"].value;
+    //var password = document.forms["login"]["password"].value;
+    //var ref = firebase.database().ref("users");
     
+    //if(ref.isEqual(email)&&ref.isEqual(password)){
+        window.location.replace("http://localhost:8080/Project-IoT/createaccount.jsp");
+    //}
+    //else{
+        window.location.replace("http://localhost:8080/Project-IoT/forgotpassword.jsp");
+    //}
 }
 
 // Initialize Firebase DB

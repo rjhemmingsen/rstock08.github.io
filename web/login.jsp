@@ -1,10 +1,12 @@
-<%-- 
+<!-- 
     Document   : login
     Created on : Apr 17, 2018, 12:44:45 AM
     Author     : ReedS
---%>
+-->
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<script type="text/javascript" src="javascript/functions.js"> 
+    intitializeFireBase(); </script>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -47,7 +49,7 @@ if (session.getAttribute("email") != null) {
         
         
         <div class="login">
-            <form method="post" action="LoginServlet">
+            <form method="post" action="login();">
                 <input type="text" placeholder="email" name="email" required>  
                 <input type="password" placeholder="password" name="password" required>
                 <br>

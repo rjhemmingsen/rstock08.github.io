@@ -37,4 +37,83 @@
             30
         </session-timeout>
     </session-config>
+    
+    
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>test.iowa.air@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>testing123test!</param-value>
+    </context-param>
+    <welcome-file-list>
+        <welcome-file>EmailForm.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    
+    <!--
+    <!DOCTYPE html>
+
+<head>
+<title>Test Web</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = 
+  {
+    apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+    authDomain: "team3-iot-project-test.firebaseapp.com",
+    databaseURL: "https://team3-iot-project-test.firebaseio.com",
+    projectId: "team3-iot-project-test",
+    storageBucket: "team3-iot-project-test.appspot.com",
+    messagingSenderId: "858962275276"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript" src="./functions.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+  <header></header>
+   
+  <nav> 
+    <li><a href="./enroll.html">enroll</a></li>
+    <li><a href="./settings.html">settings</a></li>
+    <li><a href="./account.html">account</a></li>
+    <li><a href="./index.html">home</a></li>
+  </nav>
+  
+  <div id="content"> 
+    <p id="context_text">
+      SETTINGS HERE
+    </p>
+    
+  </div>
+  <footer></footer>
+
+  </div>
+
+</body>
+
+</html> -->
 </web-app>

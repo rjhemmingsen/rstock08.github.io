@@ -1,0 +1,85 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* global firebase */
+var ref = firebase.database().ref("/");
+var userRef = ref.child("users");
+
+ref.child("/message").on("value",function(snap)
+{
+  var msg = snap.val();
+  
+  switch(msg)
+  {
+    case "ready":
+      break;
+    case "enroll":
+      //do enroll shit
+      alert("this is just a test. everything done on pi");
+      ref.child("message").set("ready");
+      break;
+    default:
+      alert("technical difficulty: invalid message");
+      ref.child("message").set("ready");
+      break;
+  }
+
+});
+
+function enrollFinger()
+{
+  var ID = parseInt(document.getElementById("fingerID").value);
+
+  if( ID < 0 || ID > 127 || isNaN(ID) )
+  {
+    alert("invalid fingerID");
+    return;
+  }
+  else
+  {
+      userRef.once("value",function(snap)
+  {
+    if( !snap.hasChild(ID.toString()) )
+    { //SHOULD ALSO DO SOME CHECKS FOR EMPTY FIELDS
+      userRef.child(ID).set(
+      {
+        email : document.getElementById("emailInput").value,
+        password : document.getElementById("passwordInput").value,
+        firstName : document.getElementById("fNameInput").value,
+        lastName : document.getElementById("lNameInput").value,
+        address : document.getElementById("addressInput").value,
+        zipcode : document.getElementById("zipcodeInput").value,
+        city : document.getElementById("cityInput").value,
+        state : document.getElementById("stateInput").value
+      });
+      alert("place finger on fingerprint scanner and click OK to continue");
+      ref.child("message").set("enroll");
+    }
+  
+  else
+    alert("ID exists already");
+  });
+  }
+}
+
+function login(){
+    
+}
+
+// Initialize Firebase DB
+function intitializeFireBase(){
+src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js";
+    var config = 
+    {
+        apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+        authDomain: "team3-iot-project-test.firebaseapp.com",
+        databaseURL: "https://team3-iot-project-test.firebaseio.com",
+        projectId: "team3-iot-project-test",
+        storageBucket: "team3-iot-project-test.appspot.com",
+        messagingSenderId: "858962275276"
+    };
+    firebase.initializeApp(config);
+  }

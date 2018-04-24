@@ -40,7 +40,7 @@ if (session.getAttribute("email") != null) {
         
         <ul>
           <li><a href="index.jsp">Home</a></li>
-          <li><a href="location.jsp">Hourly</a></li>
+          <li><a href="change.jsp">Change</a></li>
           <li style="float:right"><a href="<%=profilePage%>"><%=profileSet%></a></li>
           <li style="float:right"><a href="<%=logPage%>"><%=logSet%></a></li>
         </ul>

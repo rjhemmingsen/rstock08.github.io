@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("email", email);
                 //session.setAttribute("type", type);
 
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("printregistration.jsp");
                 return;
         }
         response.sendRedirect("error.html");

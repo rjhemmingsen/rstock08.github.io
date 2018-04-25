@@ -66,17 +66,42 @@ function enrollFinger()
 }
 
 function login(){
-    // Find all dinosaurs whose names come before Pterodactyl lexicographically.
-    //var email = document.forms["login"]["email"].value;
-    //var password = document.forms["login"]["password"].value;
-    //var ref = firebase.database().ref("users");
+    var email = document.forms["login"]["email"].value;
+    var password = document.forms["login"]["password"].value;
     
-    //if(ref.isEqual(email)&&ref.isEqual(password)){
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        window.alert("Error : " + errorMessage);
+
         window.location.replace("http://localhost:8080/Project-IoT/createaccount.jsp");
-    //}
-    //else{
+
+        // ...
+    }); 
+    
+    window.alert("Success!");
+    
+    window.location.replace("http://localhost:8080/Project-IoT/forgotpassword.jsp");
+    
+    //window.alert("Success!");
+    
+    //ref.orderByChild('email').equalTo(email).on("value", function(snapshot) {
+    //    console.log(snapshot.val());
+    //    snapshot.forEach(function(data) {
+    //        console.log(data.key);
+    //    });
+    //});
+    
+    /*
+    if(userRef.orderByChild('email').equalTo(email)){
+        
+        window.location.replace("http://localhost:8080/Project-IoT/createaccount.jsp");
+    }
+    else{
         window.location.replace("http://localhost:8080/Project-IoT/forgotpassword.jsp");
-    //}
+    }*/
 }
 
 // Initialize Firebase DB

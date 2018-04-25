@@ -5,8 +5,13 @@
 -->
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<script type="text/javascript" src="javascript/functions.js"> 
-    intitializeFireBase(); </script>
+<script type="text/javascript" src="javascript/functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script>
+    intitializeFireBase();
+</script>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.

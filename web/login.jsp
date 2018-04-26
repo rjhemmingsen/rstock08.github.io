@@ -6,30 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <script type="text/javascript" src="javascript/functions.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<script>
-    
-    // Initialize Firebase
-    var config = 
-    {
-        apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
-        authDomain: "team3-iot-project-test.firebaseapp.com",
-        databaseURL: "https://team3-iot-project-test.firebaseio.com",
-        projectId: "team3-iot-project-test",
-        storageBucket: "team3-iot-project-test.appspot.com",
-        messagingSenderId: "858962275276"
-    };
-
-    firebase.initializeApp(config);
-</script>
 
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
 <%
 String logPage, logSet, profilePage, profileSet;
@@ -47,32 +25,33 @@ if (session.getAttribute("email") != null) {
 %>
 
 <html>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = 
+    {
+      apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+      authDomain: "team3-iot-project-test.firebaseapp.com",
+      databaseURL: "https://team3-iot-project-test.firebaseio.com",
+      projectId: "team3-iot-project-test",
+      storageBucket: "team3-iot-project-test.appspot.com",
+      messagingSenderId: "858962275276"
+    };
+
+    firebase.initializeApp(config);
+    </script>
+    
     <head>
         <title>Login Form</title>
         <link rel='stylesheet' href='css/style.css'>
-        
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = 
-          {
-              apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
-              authDomain: "team3-iot-project-test.firebaseapp.com",
-              databaseURL: "https://team3-iot-project-test.firebaseio.com",
-              projectId: "team3-iot-project-test",
-              storageBucket: "team3-iot-project-test.appspot.com",
-              messagingSenderId: "858962275276"
-          };
-
-          firebase.initializeApp(config);
-        </script>
-        
     </head>
     <body>
         

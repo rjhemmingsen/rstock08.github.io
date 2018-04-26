@@ -47,6 +47,7 @@ if (session.getAttribute("email") != null) {
     };
 
     firebase.initializeApp(config);
+    
     </script>
     
     <head>

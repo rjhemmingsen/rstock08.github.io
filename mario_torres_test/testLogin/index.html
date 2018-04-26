@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<!-- HOME PAGE -->
+<head>
+<title>Test Web</title>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase TEST PROJECT ONLY ONE USER
+  //email: dude@fake.com password: fakepassyo!
+  var config = {
+    apiKey: "AIzaSyADcZGew3gJ36zfC2v9-4ZK5Y3Lm35_R5Y",
+    authDomain: "testproject-3d924.firebaseapp.com",
+    databaseURL: "https://testproject-3d924.firebaseio.com",
+    projectId: "testproject-3d924",
+    storageBucket: "testproject-3d924.appspot.com",
+    messagingSenderId: "87032337621"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src ="./functions.js"></script>
 
+<body onload=checkSession()>
+  <label>email</label><input id="email" type="text"></input><br>
+  <label>password</label><input id="pass" type="text"></input><br>
+  <input id="signIn" type="button" onclick="signIn()" value="Sign In"></input>
+  <input id="signOut" type="button" onclick="signOut()" value="Sign Out"></input>
+</body>
+  
+</head>

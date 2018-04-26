@@ -69,12 +69,12 @@ function login(){
     var email = document.forms["login"]["email"].value;
     var password = document.forms["login"]["password"].value;
     
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    ref.firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        window.alert("Error : " + errorMessage);
+        window.alert("Error : " + errorMessage + errorCode);
 
         window.location.replace("http://localhost:8080/Project-IoT/createaccount.jsp");
 
@@ -103,18 +103,3 @@ function login(){
         window.location.replace("http://localhost:8080/Project-IoT/forgotpassword.jsp");
     }*/
 }
-
-// Initialize Firebase DB
-function intitializeFireBase(){
-src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js";
-    var config = 
-    {
-        apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
-        authDomain: "team3-iot-project-test.firebaseapp.com",
-        databaseURL: "https://team3-iot-project-test.firebaseio.com",
-        projectId: "team3-iot-project-test",
-        storageBucket: "team3-iot-project-test.appspot.com",
-        messagingSenderId: "858962275276"
-    };
-    firebase.initializeApp(config);
-  }

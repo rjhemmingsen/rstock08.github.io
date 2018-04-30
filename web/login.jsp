@@ -5,8 +5,6 @@
 -->
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<script type="text/javascript" src="javascript/functions.js"></script>
-
 <!DOCTYPE html>
 
 <%
@@ -25,34 +23,34 @@ if (session.getAttribute("email") != null) {
 %>
 
 <html>
-    
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    
-    <script>
-    // Initialize Firebase
-    var config = 
-    {
-      apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
-      authDomain: "team3-iot-project-test.firebaseapp.com",
-      databaseURL: "https://team3-iot-project-test.firebaseio.com",
-      projectId: "team3-iot-project-test",
-      storageBucket: "team3-iot-project-test.appspot.com",
-      messagingSenderId: "858962275276"
-    };
-
-    firebase.initializeApp(config);
-    
-    </script>
-    
     <head>
+        
         <title>Login Form</title>
-        <link rel='stylesheet' href='css/style.css'>
+        
+        
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+        //<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
+        //<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
+        
+        <script>
+          // Initialize Firebase
+          var config = 
+          {
+            apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+            authDomain: "team3-iot-project-test.firebaseapp.com",
+            databaseURL: "https://team3-iot-project-test.firebaseio.com",
+            projectId: "team3-iot-project-test",
+            storageBucket: "team3-iot-project-test.appspot.com",
+            messagingSenderId: "858962275276"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script type="text/javascript" src="javascript/functions.js"></script>
     </head>
     <body>
         

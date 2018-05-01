@@ -1,5 +1,4 @@
 /* global firebase */
-
 var ref = firebase.database().ref("/");
 var userRef = ref.child("users");
 

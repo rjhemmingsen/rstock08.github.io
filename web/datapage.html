@@ -9,6 +9,25 @@ and open the template in the editor.
     <head>
         <title>Create Account Form</title>
         <link rel='stylesheet' href='css/style.css'>
+        
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = 
+          {
+            apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+            authDomain: "team3-iot-project-test.firebaseapp.com",
+            databaseURL: "https://team3-iot-project-test.firebaseio.com",
+            projectId: "team3-iot-project-test",
+            storageBucket: "team3-iot-project-test.appspot.com",
+            messagingSenderId: "858962275276"
+          };
+          firebase.initializeApp(config);
+          
+        </script>
+
+        <script type="text/javascript" src="javascript/functions.js"></script>   
+        
     </head>
     <body>
         

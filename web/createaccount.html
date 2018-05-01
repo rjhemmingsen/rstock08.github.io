@@ -9,6 +9,24 @@ and open the template in the editor.
     <head>
         <title>Create Account Form</title>
         <link rel='stylesheet' href='css/style.css'>
+        
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = 
+          {
+            apiKey: "AIzaSyDojrbgT5Frg2UjTKQTTIrDAFi7mCXEDKQ",
+            authDomain: "team3-iot-project-test.firebaseapp.com",
+            databaseURL: "https://team3-iot-project-test.firebaseio.com",
+            projectId: "team3-iot-project-test",
+            storageBucket: "team3-iot-project-test.appspot.com",
+            messagingSenderId: "858962275276"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script type="text/javascript" src="javascript/functions.js"></script>      
+        
     </head>
     <body>
         
@@ -21,52 +39,51 @@ and open the template in the editor.
         </ul>
         
         <div class="createaccount">
-            <form method="post" name="login" action="javascript:makeUserAuth()">
-                <input type="text" placeholder="email" name="email" id="email" required>  
-                <input type="password" placeholder="password" name="password" id="pass" required>
-                
-                <input type="submit" value="Sign In">
+            <form>
+            <table cellspacing="5" cellpadding="5" border="1">
+              <tr>
+                <td align="left">First Name:</td>
+                  <td><input id="fNameInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">Last Name:</td>
+                  <td><input id="lNameInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">Street Address:</td>
+                  <td><input id="addressInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">City:</td>
+                  <td><input id="cityInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">State:</td>
+                  <td><input id="stateInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">Zip Code:</td>
+                  <td><input id="zipcodeInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">Phone Number (xxx-xxx-xxxx):</td>
+                  <td><input id="phoneInput" type="text"></td>
+              </tr>
+              <tr>
+               <td align="left">Date of Birth:</td>
+                 <td><input id="dobInput" type="date"></td>
+              </tr>
+              <tr>
+                <td align="left">Email Address:</td>
+                  <td><input id="emailInput" type="text"></td>
+              </tr>
+              <tr>
+                <td align="left">Password:</td>
+                <td><input id="passwordInput" type="password"></td>
+              </tr>
+            </table>
+            <input id="enrollButton" type="button" onclick="enrollMessage()" value="Enroll">
             </form>
         </div>
     </body>
 </html>
-
-
-<html>
-    <head>
-        <title>Login Form</title>
-        <link rel='stylesheet' href='css/style.css'>
-    </head>
-    <body>
-        
-        <header>
-            <img class='banner' src="images/banner.jpg" alt="Internet of things banner" >
-        </header>
-        
-        <ul>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-        
-        <div class="createaccount">
-            <form method="post" action="javascript:makeUserAuth()">
-                <input type="text" placeholder="email" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
-                <input type="text" placeholder="First Name" name="fname" required>
-                <input type="text" placeholder="Last Name" name="lname" required>
-                <input type="text" placeholder="Zip Code" name="zip" required>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </body>
-</html>
-
-        'email' : document.getElementById("emailInput").value,
-        'password' : document.getElementById("passwordInput").value,
-        'firstName' : document.getElementById("fNameInput").value,
-        'lastName' : document.getElementById("lNameInput").value,
-        'dob' : document.getElementById("dobInput").value,
-        'address' : document.getElementById("addressInput").value,
-        'zipcode' : document.getElementById("zipcodeInput").value,
-        'city' : document.getElementById("cityInput").value,
-        'state' : document.getElementById("stateInput").value,
-        'phone' : document.getElementById("phoneInput").value,

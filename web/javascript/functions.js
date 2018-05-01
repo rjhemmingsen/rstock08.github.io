@@ -234,7 +234,6 @@ function signIn()
   {
     if( firebase.auth().currentUser === null ) {
       alert("fail to log in!");
-      window.location.replace("datapage.html");
   }
     else {
       alert("sign in!");  
